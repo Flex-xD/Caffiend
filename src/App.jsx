@@ -1,8 +1,26 @@
+import "./index.css";
 import './fanta.css';
+import Hero from "./components/Hero.jsx";
+import CoffeeForm from "./components/CoffeeForm.jsx";
+import Stats from "./components/Stats.jsx";
+import Layout from "./components/Layout.jsx";
 
 const App = () => {
+
+  const isUserAuthenticated = false;
+
+  const authenticatedContent = (
+    <>
+        <Stats/>
+        <History/>
+    </>
+  )
   return (
-    <h1>This is a coffee tracker app !</h1>
+    <Layout>
+      <Hero/>
+      <CoffeeForm/>
+      {isUserAuthenticated && (authenticatedContent)}
+    </Layout>
   )
 }
 
