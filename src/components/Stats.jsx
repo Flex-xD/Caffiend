@@ -1,4 +1,5 @@
-const Stats = () => {
+const stateCard = (props) => {
+    const {childern} = props;
     return (
         <div>
 
@@ -6,4 +7,19 @@ const Stats = () => {
     )
 }
 
-export default Stats
+
+const Stats = () => {
+    return (
+        <>
+            <div className="section-header">
+                <i className="fa-Solid fa-chart-simple"/>
+                <h2>Stats</h2>
+            </div>
+            <div className="stats-grid">
+
+            </div>
+        </>
+    )
+}
+
+export default Stats;

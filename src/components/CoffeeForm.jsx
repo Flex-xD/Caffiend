@@ -1,6 +1,10 @@
-import {coffeeOptions } from "../utils/index.js"
+import {coffeeOptions } from "../utils/index.js";
+import {useState} from "react";
 
 const CoffeeForm = () => {
+
+    const [selectedCoffee , setselectedCoffee] = useState(null);
+    const [showCoffeeState , setShowCoffeeState] = useState(false);
     return (
         <>
             <div className="section-header">
@@ -11,13 +15,17 @@ const CoffeeForm = () => {
             <div className="coffee-grid">
                 {coffeeOptions.slice(0 , 5).map((option , optionIndex) => {
                     return (
-                        <button key={optionIndex} className="button-card">
+                        <button key={optionIndex} className={"button-card " + (option.name) === selectedCoffee ? "coffee-button-selected" : ""} onClick={() => {
+                            setselectedCoffee(option.name);
+                        }}>
                             <h4>{option.name}</h4>
                             <p>{option.caffeine} mg</p>
                         </button>
                     )
                 })}
-                <button className="button-card">
+                <button className="button-card" onClick={() => {
+                    setShowCoffeeState(true);
+                }}>
                     <h4>Other</h4>
                     <p>N/A</p>
                 </button>
