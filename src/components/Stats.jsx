@@ -1,11 +1,11 @@
-const stateCard = (props) => {
-    const {childern} = props;
-    return (
-        <div>
+// const stateCard = (props) => {
+//     const {childern} = props;
+//     return (
+//         <div>
 
-        </div>
-    )
-}
+//         </div>
+//     )
+// }
 
 
 const Stats = () => {

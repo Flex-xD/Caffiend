@@ -4,10 +4,11 @@ import Hero from "./components/Hero.jsx";
 import CoffeeForm from "./components/CoffeeForm.jsx";
 import Stats from "./components/Stats.jsx";
 import Layout from "./components/Layout.jsx";
+import History from "./components/History.jsx";
 
 const App = () => {
 
-  const isUserAuthenticated = false;
+  const isUserAuthenticated = true;
 
   const authenticatedContent = (
     <>

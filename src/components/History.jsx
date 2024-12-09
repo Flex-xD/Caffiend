@@ -1,7 +1,6 @@
 const History = () => {
     return (
         <div>
-
         </div>
     )
 }
